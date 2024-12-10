@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoviFolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="onepager.css">
+</head>
+<body>
+    <!-- Fixed Navbar -->
+    <nav class="navbar">
+        <ul class="navbar__menu">
+            <img src="logo.jpg" alt="" class="navbar__img">
+            <li><a href="#landing" class="navbar__link">Home</a></li>
+            <li><a href="#about" class="navbar__link">About Me</a></li>
+            <li><a href="#skills" class="navbar__link">Skills</a></li>
+            <li><a href="#contacts" class="navbar__link">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <!-- Landing Section -->
+    <section id="landing" class="landing">
+        <div>
+            <h1>Welcome to My Portfolio</h1>
+            <p>Your multimedia solution for basketball marketing in Europe!
+                <br>
+                <br>
+                Your wildest basketball content ideas come to life here!
+            </p>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div>
+            <h2>About Me</h2>
+            <p><strong>Who am I?</strong> I'm a Multimedia Designer student specializing in creative solutions for basketball marketing. 
+                <br>
+                <strong>My dream?</strong> is to work with the biggest basketball names in Europe, like FIBA, Euroleague, and Žalgiris.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div>
+            <h2>Skills</h2>
+            <p>Explore my expertise in design, video editing, and web development tailored for basketball brands.</p>
+        </div>
+    </section>
+    <main class="main"></main>
+        <div class="container"div class="skills">
+                <div class="skills__item">
+                    <i class="fa-solid fa-basketball"></i>
+                    <div class="skills__hover">
+                        <p class="skills__text">Product photography</p>
+                    </div>
+                    <div class="carousel">
+                        <img src="./img/DSC08071.JPG" alt="" class="carousel__image">
+                        <img src="./img/DSC08074.JPG" alt="" class="carousel__image">
+                        <img src="./img/DSC08086.JPG" alt="" class="carousel__image">
+                        <img src="./img/DSC08089.JPG" alt="" class="carousel__image">
+                        <img src="./img/DSC08105.JPG" alt="" class="carousel__image">
+                    </div>
+                    <div class="carousel">
+                        <img src="./img/DSC08074.JPG" alt="" class="carousel__image">
+                        <img src="./img/DSC08086.JPG" alt="" class="carousel__image">
+                        <img src="./img/DSC08089.JPG" alt="" class="carousel__image">
+                        <img src="./img/DSC08105.JPG" alt="" class="carousel__image">
+                        <img src="./img/DSC08071.JPG" alt="" class="carousel__image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="skills">
+                <div class="skills__item">
+                    <i class="fa-solid fa-basketball"></i>
+                    <div class="skills__hover">
+                        <p class="skills__text">Description of this skill.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="container">
+            <div class="skills">
+                <div class="skills__item">
+                    <i class="fa-solid fa-basketball"></i>
+                    <div class="skills__hover">
+                        <p class="skills__text">Description of this skill.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="skills">
+                <div class="skills__item">
+                    <i class="fa-solid fa-basketball"></i>
+                    <div class="skills__hover">
+                        <p class="skills__text">Description of this skill.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="contacts">
+        <div>
+            <h2>Contact Me</h2>
+            <p>Email: posi66890@edu.ucl.dk | Phone: +45 01 02 03 04</p>
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
+                <fieldset id="fs-frm-inputs">
+                  <label for="full-name">Full Name</label>
+                  <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                  <label for="email-address">Email Address</label>
+                  <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+                  <label for="message">Message</label>
+                  <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+                  <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                </fieldset>
+                <input type="submit" value="Submit">
+              </form>
+        </div>
+    </section>
+    <script>
+        // Smooth manual scrolling
+document.querySelectorAll('.navbar__link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        const offsetTop = target.offsetTop;
+
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    });
+});
+
+        // JS code for the carousel
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            const images = carousel.querySelectorAll('.carousel__image');
+            let currentIndex = 0;
+
+            const showImage = (index) => {
+                images.forEach((img, i) => {
+                    img.style.display = i === index ? 'block' : 'none';
+                });
+            };
+
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            }, 3000);
+
+            showImage(currentIndex);
+        });
+    
+    </script>
+</body>
+</html>
