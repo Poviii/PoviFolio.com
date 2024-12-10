@@ -69,11 +69,11 @@ section {
     color: var(--color-text);
 }
 
-/* .skills {
+.skills {
     background-color: var(--color-bg);
     color: var(--color-text);
 } */
-/* Skills page styles */
+/* Skills page styles*/
 .skills {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
