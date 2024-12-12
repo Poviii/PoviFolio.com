@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -17,62 +17,12 @@ body {
 }
 
 /* Fixed Navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--color-nav-bg);
-    padding: 1rem 0;
-    z-index: 1000;
+
+/* Landing */
+.landing__img{
+  height: 200px;
 }
 
-.navbar__menu {
-    display: flex;
-    justify-content: space-around;
-    gap: 2rem;
-    list-style-type: none;
-}
-
-.navbar__link {
-    color: var(--color-bg);
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.navbar__link:hover {
-    color: var(--color-primary);
-}
-
-.navbar__img {
-    width: 150px;
-}
-/* Section Styles */
-section {
-    min-height: 64vw;
-    padding: 5rem 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.landing {
-    background-color: var(--color-primary);
-    color: var(--color-bg);
-}
-
-.about {
-    background-color: var(--color-secondary);
-    color: var(--color-text);
-}
-
-.skills {
-    background-color: var(--color-bg);
-    color: var(--color-text);
-} */
 /* Skills page styles*/
 .skills {
   display: grid;
@@ -125,9 +75,7 @@ section {
 
 }
 
-.carousel:nth-of-type(2) {
-  animation: slideout 5s infinite alternate;
-}
+
 
 @keyframes slideout {
   0% {
@@ -140,13 +88,15 @@ section {
 
 .carousel__image {
   width: 100%;
-  
 }
 
 .contacts {
     z-index: 10;
     background-color: var(--color-primary);
-    color: var(--color-bg);
+}
+
+input[type=button] {
+  color: var(--color-text);
 }
 
 h1, h2 {
@@ -169,7 +119,6 @@ p {
         font-size: 0.9rem;
     }
 }
-
 
 /* reset */
 #fs-frm input,
@@ -257,22 +206,4 @@ p {
   -webkit-appearance: radio;
   -moz-appearance: radio;
   appearance: radio;
-}
-
-/* address, locale */
-#fs-frm fieldset.locale input[name="city"],
-#fs-frm fieldset.locale select[name="state"],
-#fs-frm fieldset.locale input[name="postal-code"] {
-  display: inline;
-}
-#fs-frm fieldset.locale input[name="city"] {
-  width: 52%;
-}
-#fs-frm fieldset.locale select[name="state"],
-#fs-frm fieldset.locale input[name="postal-code"] {
-  width: 20%;
-}
-#fs-frm fieldset.locale input[name="city"],
-#fs-frm fieldset.locale select[name="state"] {
-  margin-right: 3%;
 }

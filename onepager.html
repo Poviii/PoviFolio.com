@@ -10,9 +10,10 @@
 <body>
     <!-- Fixed Navbar -->
     <nav class="navbar">
+        <a href="#" class="landing">
+            <img src="./img/logo.jpg" alt="" class="navbar__img">
+        </a>
         <ul class="navbar__menu">
-            <img src="logo.jpg" alt="" class="navbar__img">
-            <li><a href="#landing" class="navbar__link">Home</a></li>
             <li><a href="#about" class="navbar__link">About Me</a></li>
             <li><a href="#skills" class="navbar__link">Skills</a></li>
             <li><a href="#contacts" class="navbar__link">Contacts</a></li>
@@ -21,14 +22,13 @@
 
     <!-- Landing Section -->
     <section id="landing" class="landing">
-        <div>
+            <img class="landing__img" src="./img/Povi/IMG_2511.JPG" alt="Portrait photo of me">
             <h1>Welcome to My Portfolio</h1>
             <p>Your multimedia solution for basketball marketing in Europe!
                 <br>
                 <br>
                 Your wildest basketball content ideas come to life here!
             </p>
-        </div>
     </section>
 
     <!-- About Me Section -->
@@ -49,12 +49,14 @@
             <p>Explore my expertise in design, video editing, and web development tailored for basketball brands.</p>
         </div>
     </section>
-    <main class="main"></main>
-        <div class="container"div class="skills">
+    
+    <main class="main">
+        <div class="container">
+            <div class="skills">
                 <div class="skills__item">
                     <i class="fa-solid fa-basketball"></i>
                     <div class="skills__hover">
-                        <p class="skills__text">Product photography</p>
+                        <p class="skills__text">Apparel photography</p>
                     </div>
                     <div class="carousel">
                         <img src="./img/DSC08071.JPG" alt="" class="carousel__image">
@@ -78,8 +80,9 @@
                 <div class="skills__item">
                     <i class="fa-solid fa-basketball"></i>
                     <div class="skills__hover">
-                        <p class="skills__text">Description of this skill.</p>
+                        <p class="skills__text">Product Display Montage</p>
                     </div>
+                    <img src="/img/ShoeDisplay.mp4" alt="" class="skills__video">
                 </div>
             </div>
         </div>
@@ -110,17 +113,17 @@
         <div>
             <h2>Contact Me</h2>
             <p>Email: posi66890@edu.ucl.dk | Phone: +45 01 02 03 04</p>
-            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/fs-frm" method="post">
                 <fieldset id="fs-frm-inputs">
                   <label for="full-name">Full Name</label>
                   <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
                   <label for="email-address">Email Address</label>
                   <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
                   <label for="message">Message</label>
-                  <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+                  <textarea rows="5" name="message" id="message" placeholder="Type your desired message here..." required=""></textarea>
                   <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
                 </fieldset>
-                <input type="submit" value="Submit">
+                <input type="button" value="Submit">
               </form>
         </div>
     </section>
