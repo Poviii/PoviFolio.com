@@ -20,16 +20,19 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Navbar */
 .navbar {
-  position: relative;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
   background-color: var(--color-primary);
-  padding: var(--spacing);
+  padding: var(--spacing)/2;
 }
 
 .navbar__menu {
@@ -49,7 +52,7 @@ body {
 }
 
 .navbar__img {
-  width: 150px;
+  width: 110px;
   height: auto;
   border-radius: 10%;
 }
@@ -80,14 +83,17 @@ body {
 }
 
 /* About Me Section */
-.about {
-  text-align: center;
+#about {
+  display: flex;
+  width: 100%;
+  justify-content: center;
   padding: 2rem;
   background-color: var(--color-bg);
   color: var(--color-text);
 }
 
-.about h2 {
+.about__content h2 {
+  text-align: center;
   font-size: 1.5rem;
   color: var(--color-primary);
   margin-bottom: 1rem;
@@ -98,9 +104,13 @@ body {
   line-height: 1.8;
 }
 
+#about > * {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
 /* Skills Section */
 .skills {
-  margin-bottom: 2rem;
   padding: 2rem;
   background-color: var(--color-secondary);
 }
@@ -121,7 +131,7 @@ body {
 /* Skills Item */
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing);
   justify-content: center; /* Center the grid items horizontally */
   align-content: center; /* Center the grid items vertically if there's extra space */
@@ -194,17 +204,21 @@ body {
 
 /* Contacts Section */
 .contacts {
+  display: flex;
+  justify-content: center;
   padding: 2rem;
   background-color: var(--color-primary);
   color: var(--color-bg);
 }
 
 .contacts h2 {
+  text-align: center;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .contacts p {
+  text-align: center;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
@@ -228,7 +242,7 @@ input[type="button"]:hover {
 #fs-frm input,
 #fs-frm textarea,
 #fs-frm fieldset {
-  width: 100%;
+  width: 90%;
   margin-bottom: 1rem;
   padding: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -275,7 +289,7 @@ input[type="button"]:hover {
   }
 
   .skills__animation {
-    height: 300px; /* Reduce size of animation */
-    width: 300px;
+    height: 400px; /* Reduce size of animation */
+    width: 400px;
   }
 }
