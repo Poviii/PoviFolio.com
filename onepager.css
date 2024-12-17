@@ -33,6 +33,7 @@ body {
   z-index: 10;
   background-color: var(--color-primary);
   padding: var(--spacing)/2;
+  border: 3px solid var(--color-hover-bg);
 }
 
 .navbar__menu {
@@ -65,7 +66,6 @@ body {
 }
 
 .landing__img {
-  display: inline;
   width: 500px;
   height: auto;
   border-radius: 10%;
@@ -130,6 +130,7 @@ body {
 
 /* Skills Item */
 .container {
+  max-width: 100vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing);
@@ -180,8 +181,8 @@ body {
   border-radius: 8px;
 }
 
-/* Video and Animation */
-.skills__media {
+/* Animation */
+.skills__media, video {
   width: 100%;
   border-radius: 8px;
 }
@@ -274,6 +275,9 @@ input[type="button"]:hover {
 } */
 
 @media (max-width: 768px) {
+  .navbar__link {
+
+  }
   .container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduce column size */
     padding: 0.5rem;
@@ -291,5 +295,8 @@ input[type="button"]:hover {
   .skills__animation {
     height: 400px; /* Reduce size of animation */
     width: 400px;
+  }
+  .landing__img {
+    max-width: 100%;
   }
 }
